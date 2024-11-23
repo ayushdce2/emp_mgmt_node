@@ -1,0 +1,26 @@
+
+.my_dashHomeItem{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 1rem;
+    
+}
+.my_dashHome_heading{
+    font-weight: bold;
+    color: #71b1e5;
+    font-size: 1.5rem;
+}
+.my_dashHomeItem:nth-child(2){
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+
+.my_admindash_notification ul li a{
+    background-color: #ddd;
+    padding: 0.5rem;
+    display: inline-block;
+    color: #71b1e5;
+    background-color: #d8e9f6c4;
+}

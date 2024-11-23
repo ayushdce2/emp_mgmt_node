@@ -1,0 +1,85 @@
+.my_admindashboard_background{
+    /* background-image: url('../images/admindashboard_background.jpg'); */
+    background:linear-gradient(0deg, rgba(229, 235, 247, 0.5), rgba(229, 235, 247, 0.5)), url(http://localhost:3000/static/media/admindashboard_background.55ed03821c2d88f7e93c.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.my_admindash_navwrap{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    /* background-color: #eef1f787; */
+    background-color: #d8e9f6c4;
+
+}
+
+.my_admindash_nav label{
+    color: #71b1e5;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.my_admindash_navlist .my_admindash_navitem a{
+    /* background-color: #71b1e5; */
+    padding: 0.8rem;
+    padding-left: 1.2rem;
+    border-left: 5px solid transparent;
+    color: #71b1e5;
+    font-weight: bold;
+}
+
+.my_admindash_navlist .my_admindash_navitem a:hover,
+.my_admindash_navlist .my_admindash_navitem.active a{
+    background-color: #71b1e5;
+    border-left: 5px solid #1596ff;
+    color: #ddd;
+}
+
+.my_admindash_navicon{
+    
+    width: 1.5rem;
+    height: 1.5rem;
+    /* display: inline-block; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.my_admindash_navicon.dashboard_icon{
+    background-image: url(../images/dashboardiconFill.svg);
+}
+.my_admindash_navlist .my_admindash_navitem a:hover .my_admindash_navicon.dashboard_icon,
+.my_admindash_navlist .my_admindash_navitem.active .my_admindash_navicon.dashboard_icon{
+    background-image: url(../images/dashboardiconWhite.svg);
+}
+.my_admindash_navicon.comingsoon_icon{
+    background-image: url(../images/comingsooniconFill.svg);
+}
+.my_admindash_navlist .my_admindash_navitem a:hover .my_admindash_navicon.comingsoon_icon,
+.my_admindash_navlist .my_admindash_navitem.active .my_admindash_navicon.comingsoon_icon{
+    background-image: url(../images/comingsooniconWhite.svg);
+}
+.my_admindash_navicon.addemp_icon{
+    background-image: url(../images/addEmpFill.svg);
+}
+.my_admindash_navlist .my_admindash_navitem a:hover .my_admindash_navicon.addemp_icon,
+.my_admindash_navlist .my_admindash_navitem.active .my_admindash_navicon.addemp_icon{
+    background-image: url(../images/addEmpWhite.svg);
+}
+/* .my_admindash_navicon img{
+    width: 100%;
+    height: 100%;
+    
+} */
+
+.my_admindash_navitem a{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.my_admindash_navlist .my_admindash_navitem{
+    border-bottom: 2px solid #71b1e569;
+}
+
+
+.my_admindash_contentwrap{
+    background-color: rgb(213 232 245 / 30%);
+    padding: 1rem;
+    overflow: auto;
+}
