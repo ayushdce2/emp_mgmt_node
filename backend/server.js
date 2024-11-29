@@ -3,8 +3,9 @@ const app = express();
 const cors = require("cors");
 
 const mongoose = require("mongoose");
+const My_Mongo_Url = "mongodb+srv://ayushdce2:8445315561Aa@cluster0.8kkxg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
-        mongoose.connect("mongodb+srv://ayushdce2:8445315561Aa@cluster0.8kkxg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+        mongoose.connect(My_Mongo_Url)
             .then((response)=>{console.log("Connected to empMgmtD")})
             .catch((error)=>{console.log(error,"error NOT connected to empMgmtD")});
 
