@@ -106,11 +106,15 @@ const AdminHome = ()=>{
 
     return (
         <>
+                                    <div className="mb-6">
+                    <p className="main_heading">Home</p>
+                </div>
                                     <div className='my_dashHome grid grid-cols-3 gap-3 '>
                             <div className='my_dashHomeItem'>
                                 <div>
                                     <p className='my_dashHome_heading'>Sample Heading</p>
                                 </div>
+                                
 
                                 <div>
 
