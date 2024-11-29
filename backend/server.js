@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const mongoose = require("mongoose");
 
-        mongoose.connect("mongodb://localhost:27017/empMgmtD")
+        mongoose.connect("mongodb+srv://ayushdce2:8445315561Aa@cluster0.8kkxg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
             .then((response)=>{console.log("Connected to empMgmtD")})
             .catch((error)=>{console.log(error,"error NOT connected to empMgmtD")});
 
