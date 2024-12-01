@@ -3,11 +3,12 @@ const app = express();
 const cors = require("cors");
 
 const mongoose = require("mongoose");
+let db_status= "start";
 const My_Mongo_Url = "mongodb+srv://ayushdce2:8445315561Aa@cluster0.8kkxg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
         mongoose.connect(My_Mongo_Url)
-            .then((response)=>{console.log("Connected to empMgmtD")})
-            .catch((error)=>{console.log(error,"error NOT connected to empMgmtD")});
+            .then((response)=>{console.log("Connected to empMgmtD"); db_status="connected DB"})
+            .catch((error)=>{console.log(error,"error NOT connected to empMgmtD"); db_status="NoT connected DB"});
 
 const loginSchema = mongoose.Schema({
             username: String,
@@ -21,15 +22,16 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/api/login",(req,res)=>{
-    res.json({message:"Login Successfull"})
+    res.json({message:"Login Successfull",db_status:db_status});
+
 })
 
 app.post("/api/login",async (req,res)=>{
     
     // console.log(req.body,"<--req.body");
     const loggedUserData = await loginModel.findOne({ username:req.body.username });
-    // console.log(loggedUserData,"loggedUserData");
-
+    console.log(loggedUserData,"loggedUserData");
+    db_status = loggedUserData;
     if(loggedUserData){
         res.json({message:"login success",redirectUrl:"/admin/dashboard"});
     }else{
@@ -59,7 +61,7 @@ app.post("/api/empadd",async (req,res)=>{
                 jdate : req.body.jdate
             }
         );
-    
+        db_status = empData;
             await empData.save();
              res.json({message:"data saved to db"});
 
