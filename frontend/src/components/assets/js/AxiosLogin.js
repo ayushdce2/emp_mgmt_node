@@ -8,7 +8,7 @@ export const AxiosLogin = async (signInData)=>{
         if(response.data.redirectUrl==="/admin/dashboard"){
            return window.location.href = response.data.redirectUrl;
         }else{
-            return console.log(response.data.message)
+            return console.log(response.data.message,"<---axiosLogin")
         }
         
     })
