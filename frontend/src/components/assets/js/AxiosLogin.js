@@ -2,7 +2,7 @@
 import axios from "axios";
 
 export const AxiosLogin = async (signInData)=>{
-    await axios.post('http://localhost:3001/api/login',signInData)
+    await axios.post('https://emp-mgmt-node-4.onrender.com/api/login',signInData)
     .then((response)=>{
         // console.log('login request sent and redirected to ->',response.data.redirectUrl);
         if(response.data.redirectUrl==="/admin/dashboard"){

@@ -23,7 +23,7 @@ const AdminAddEmp = ()=>{
         e.preventDefault();
         console.log(empData,"<------ FRONt empData");
         
-        await axios.post('http://localhost:3001/api/empadd',empData)
+        await axios.post('https://emp-mgmt-node-4.onrender.com/api/empadd',empData)
         .then((response)=>{console.log(response,"<---response")})
         .catch((error)=>{console.log(error,"<---error")});
     
