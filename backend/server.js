@@ -28,7 +28,7 @@ app.get("/api/login",(req,res)=>{
 
 app.post("/api/login",async (req,res)=>{
     
-    // console.log(req.body,"<--req.body");
+    console.log(req.body,"<--req.body");
     const loggedUserData = await loginModel.findOne({ username:req.body.username });
     console.log(loggedUserData,"loggedUserData");
     db_status = loggedUserData;
