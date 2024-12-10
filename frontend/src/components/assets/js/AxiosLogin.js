@@ -1,4 +1,4 @@
-import {  useNavigate   } from 'react-router-dom';
+// import {  useNavigate   } from 'react-router-dom';
 import axios from "axios";
 
 export const AxiosLogin = async (signInData)=>{
@@ -8,7 +8,7 @@ export const AxiosLogin = async (signInData)=>{
         console.log(response.data,"<--1-->",response,"<--2-->",'login request sent and redirected to ->',response.data.redirectUrl);
         if(response.data.redirectUrl==="/admin/dashboard"){
         //    return window.location.href = response.data.redirectUrl;
-        return navigate(response.data.redirectUrl);
+            return navigate(response.data.redirectUrl);
         }else{
             return console.log(response.data.message,"<---axiosLogin")
         }
