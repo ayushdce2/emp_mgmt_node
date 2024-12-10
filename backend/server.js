@@ -35,7 +35,7 @@ app.post("/api/login",async (req,res)=>{
     if(loggedUserData){
         res.json({message:"login success",redirectUrl:"/admin/dashboard"});
     }else{
-        res.json({message:"Invalid username or password",db_status:db_status});
+        res.json({message:"Invalid username or password server",db_status:db_status});
     }
 });
 
