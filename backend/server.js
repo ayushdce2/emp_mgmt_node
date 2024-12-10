@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const mongoose = require("mongoose");
 let db_status= "start";
-const My_Mongo_Url = "mongodb+srv://ayushdce2:8445315561Aa@cluster0.8kkxg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const My_Mongo_Url = "mongodb+srv://ayushdce2:8445315561Aa@cluster0.8kkxg.mongodb.net/empMgmtD/?retryWrites=true&w=majority&appName=Cluster0";
 
         mongoose.connect(My_Mongo_Url)
             .then((response)=>{console.log("Connected to empMgmtD"); db_status="connected DB"})
