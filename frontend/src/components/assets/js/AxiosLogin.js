@@ -1,8 +1,8 @@
-import {  useNavigate   } from 'react-router-dom';
+
 import axios from "axios";
 
-export const AxiosLogin = async (signInData)=>{
-    const navigate = useNavigate();
+export const AxiosLogin = async (signInData,navigate)=>{
+   
     await axios.post('https://emp-mgmt-node-5.onrender.com/api/login',signInData)
     .then((response)=>{
         console.log(response.data,"<--1-->",response,"<--2-->",'login request sent and redirected to ->',response.data.redirectUrl);

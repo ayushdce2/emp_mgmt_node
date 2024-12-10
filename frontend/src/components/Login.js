@@ -1,15 +1,16 @@
 import './assets/css/login.css';
+import {  useNavigate   } from 'react-router-dom';
 import React,{useState} from "react";
 
 import {AxiosLogin} from "./assets/js/AxiosLogin"
 
 const Login = ()=>{
-
+    const navigate = useNavigate();
     const[signInData,setSignInData] = useState({username:"",password:""});
     const signInSubmit=(e)=>{
         e.preventDefault();
         // console.log(signInData,"<-------signInData");
-        AxiosLogin(signInData);
+        AxiosLogin(signInData,navigate);
         
     }
     return (
