@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const mongoose = require("mongoose");
 let db_status= "start";
-const My_Mongo_Url = "mongodb+srv://ayushdce2:8445315561Aa@cluster0.8kkxg.mongodb.net/empMgmtD/?retryWrites=true&w=majority&appName=Cluster0";
+const My_Mongo_Url = "mongodb+srv://ayushdce2:8445315561Aa@cluster0.8kkxg.mongodb.net/empMgmtD?retryWrites=true&w=majority&appName=Cluster0";
 
         mongoose.connect(My_Mongo_Url)
             .then((response)=>{console.log("Connected to empMgmtD"); db_status="connected DB"})
@@ -22,7 +22,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/api/login",(req,res)=>{
-    res.json({message:"Login Successfull",db_status:db_status});
+    res.json({message:"Get of Login",db_status:db_status});
 
 })
 
