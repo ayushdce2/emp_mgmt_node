@@ -1,4 +1,3 @@
-import {Link } from "react-router-dom";
 import "../assets/css/adminaddemp.css";
 import React,{useState} from "react";
 import axios from 'axios';
@@ -31,32 +30,7 @@ const AdminAddEmp = ()=>{
     }
     return(
         <>
-        <div className="my_admindashboard_background">
-                <div className='w-screen h-lvh flex'>
-                    <div className="my_admindash_navwrap w-64">
-                        <div className="my_admindash_nav">
-                            <div className="mb-16">
-                                <label className="m-2">Admin</label>
-                            </div>
-
-                            <div className="">
-                                <ul className="my_admindash_navlist">
-                                    <li className={`my_admindash_navitem`} ><Link to={{pathname: "/admin/dashboard"}}><span className="my_admindash_navicon dashboard_icon"></span><span className="my_admindash_navcontent">Home</span></Link></li>
-                                    <li className={`my_admindash_navitem`} ><Link to={{pathname: "/admin/addEmp"}} ><span className="my_admindash_navicon addemp_icon"></span><span className="my_admindash_navcontent">Add Employee</span></Link></li>
-                                    <li className={`my_admindash_navitem`} ><Link to={{pathname: "/admin/comingsoon"}}><span className="my_admindash_navicon comingsoon_icon"></span><span className="my_admindash_navcontent">Coming Soon . . </span></Link></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="my_admindash_contentwrap grow">
-                        <div className='my_admindash_notification mb-4 '>
-                            <ul className='flex justify-end gap-4'>
-                                <li><a href='/#'>Messages</a></li>
-                                <li><a href='/#'>Notifications</a></li>
-                                <li><a href='/#'>Logout</a></li>
-                            </ul>
-                        </div>
-                        <form autoComplete="off" onSubmit={empAdd}>
+        <form autoComplete="off" onSubmit={empAdd}>
             <div className="my_admindash_addemp">
                 <div className="mb-6">
                     <p className="main_heading">Add Employee</p>
@@ -96,17 +70,6 @@ const AdminAddEmp = ()=>{
                 
             </div>
             </form>
-                        {/* {activeMenu === "home" && <AdminHome/>}
-                        {activeMenu === "addEmp" && <AdminAddEmp/>}
-                        {activeMenu === "comingSoon" && <AdminComingSoon/>}
-                        {activeMenu === "comingSoon1" && <AdminComingSoon/>}
-                        {activeMenu === "comingSoon2" && <AdminComingSoon/>}
-                        {activeMenu === "comingSoon3" && <AdminComingSoon/>} */}
-                        
-                    </div>
-                </div>
-            </div>
-
         </>
     )
 }
